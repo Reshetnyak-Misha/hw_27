@@ -10,6 +10,8 @@ const weather = {
         if (hint === "number") {
             const temperatures = Object.values(this);
             const sum = temperatures.reduce((acc, temp) => acc + temp, 0);
+            console.log("Минимальное",Math.min(...temperatures));
+            console.log("Максимальное",Math.max(...temperatures));
             return sum / temperatures.length;
         } else if (hint === 'string' || hint === 'default') {// У меня вопрос, если я не сравнивал с default, то выдавало undefined. Нашёл чисто в инете, почему и откуда берётся default не понимаю, обьясни пожалуйста
             const arr = [];
